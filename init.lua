@@ -775,9 +775,10 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
-        typescript = { 'prettierd', 'prettier', stop_after_first = true },
-        typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        javascript = { 'biome', 'biome-organize-imports' },
+        javascriptreact = { 'biome', 'biome-organize-imports' },
+        typescript = { 'biome', 'biome-organize-imports' },
+        typescriptreact = { 'biome', 'biome-organize-imports' },
       },
     },
   },
@@ -916,63 +917,12 @@ require('lazy').setup({
           functions = {},
           variable = {},
         },
-
-        on_colors = function(colors)
-          colors.bg = '#0a0a0a'
-          colors.bg_dark = '#080808'
-          colors.bg_dark1 = '#050505'
-          colors.bg_float = '#080808'
-          colors.bg_highlight = '#1a1a1a'
-          colors.bg_popup = '#080808'
-          colors.bg_search = '#252525'
-          colors.bg_sidebar = '#080808'
-          colors.bg_statusline = '#080808'
-          colors.bg_visual = '#333333'
-          colors.border = '#1a1a1a'
-          colors.border_highlight = '#1a3438'
-          colors.comment = '#4a4a4a'
-          colors.dark3 = '#252525'
-          colors.dark5 = '#333333'
-
-          colors.diff = {
-            add = '#1a2a1a',
-            change = '#2a2a1a',
-            delete = '#2a1a1a',
-            text = '#1a1a1a',
-          }
-
-          colors.green = '#4db8ae'
-          colors.green1 = '#3b8a82'
-          colors.green2 = '#2a6d66'
-          colors.hint = '#4db8ae'
-          colors.info = '#4db8ae'
-          colors.teal = '#4db8ae'
-
-          colors.rainbow = {
-            '#4db8ae',
-            '#808080',
-            '#4a4a4a',
-            '#4db8ae',
-            '#808080',
-            '#4a4a4a',
-            '#4db8ae',
-            '#808080',
-          }
-
-          colors.none = 'NONE'
-          colors.orange = '#b4774f'
-          colors.purple = '#7a5e8f'
-          colors.rainbow = { '#5f7f9e', '#7b664f', '#4e6f47', '#1c6660', '#7a6d9e', '#7a5e8f', '#b4774f', '#9e5575' }
-          colors.red = '#9e4a58'
-          colors.red1 = '#7f3c3c'
-          colors.teal = '#3e6e69'
-        end,
       }
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'default'
     end,
   },
 
