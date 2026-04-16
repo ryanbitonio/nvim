@@ -91,4 +91,50 @@ return {
       -- ignore_cb = nil,
     },
   },
+
+  {
+    'luukvbaal/statuscol.nvim',
+    config = function()
+      -- local builtin = require("statuscol.builtin")
+      require('statuscol').setup {
+        -- configuration goes here, for example:
+        -- relculright = true,
+        -- segments = {
+        --   { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+        --   {
+        --     sign = { namespace = { "diagnostic/signs" }, maxwidth = 2, auto = true },
+        --     click = "v:lua.ScSa"
+        --   },
+        --   { text = { builtin.lnumfunc }, click = "v:lua.ScLa", },
+        --   {
+        --     sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
+        --     click = "v:lua.ScSa"
+        --   },
+        -- }
+      }
+    end,
+  },
+
+  {
+    'EdenEast/nightfox.nvim',
+    priority = 1000,
+    config = function()
+      require('nightfox').setup {
+        palettes = {
+          carbonfox = {
+            green = '#c0e89f',
+          },
+        },
+        specs = {
+          carbonfox = {
+            syntax = {
+              string = 'green', -- Maps strings to the green defined above
+            },
+          },
+        },
+      }
+
+      vim.cmd 'colorscheme carbonfox'
+    end,
+  },
 }
