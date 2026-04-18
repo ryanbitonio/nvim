@@ -137,4 +137,18 @@ return {
       vim.cmd 'colorscheme carbonfox'
     end,
   },
+
+  {
+    'tpope/vim-fugitive',
+  },
+
+  {
+    'roobert/tailwindcss-colorizer-cmp.nvim',
+    -- optionally, override the default options:
+    config = function()
+      require('tailwindcss-colorizer-cmp').setup {
+        color_square_width = 2,
+      }
+    end,
+  },
 }

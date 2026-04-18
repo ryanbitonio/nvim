@@ -815,6 +815,9 @@ require('lazy').setup({
       luasnip.config.setup {}
 
       cmp.setup {
+        formatting = {
+          format = require('tailwindcss-colorizer-cmp').formatter,
+        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
