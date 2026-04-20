@@ -151,4 +151,38 @@ return {
       }
     end,
   },
+
+  {
+    'karb94/neoscroll.nvim',
+    opts = {},
+  },
+
+  {
+    'sphamba/smear-cursor.nvim',
+    opts = {
+      cursor_color = '#1db6bb',
+    },
+  },
+
+  {
+    'developedbyed/marko.nvim',
+    config = function()
+      require('marko').setup {
+        width = 100,
+        height = 100,
+        border = 'rounded',
+        title = ' Marks ',
+      }
+    end,
+  },
+
+  {
+    'jiaoshijie/undotree',
+    opts = {
+      -- your options
+    },
+    keys = { -- load the plugin only when using it's keybinding:
+      { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>" },
+    },
+  },
 }
