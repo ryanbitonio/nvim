@@ -203,7 +203,6 @@ return {
       vim.opt.foldlevelstart = 99
 
       vim.keymap.set('n', '<CR>', 'za', { noremap = true, silent = true })
-      vim.keymap.set('n', '[[', fold_util.goto_previous_fold, { noremap = true, silent = true })
       vim.keymap.set('n', ']]', 'zj', { noremap = true, silent = true })
     end,
   },

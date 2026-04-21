@@ -1,12 +1,1 @@
-tags
-test.sh
-.luarc.json
-nvim
-
-spell/
-/shada/
-/swap/
-/undo/
-/sessions/
-lazy-lock.json
-/plugin/packer_compiled.lua
+*
